@@ -9,6 +9,10 @@ var parse = require('co-body');
 var koa = require('koa');
 var app = koa();
 
+var config = {};
+config.NODE_ENV = process.env.NODE_ENV || 'development';
+config.PORT = Number.parseInt(process.env.PORT, 10) || 3000;
+
 // "database"
 
 var posts = [];
@@ -26,5 +30,5 @@ function *init() {
 
 // listen
 
-app.listen(3000);
-console.log('listening on port 3000');
+app.listen(config.PORT);
+console.log('listening on port config.PORT');
