@@ -8,7 +8,7 @@
     "deploy": "git push heroku master"
   },
   "engines": {
-    "node": "5.x"
+    "node": "0.11.14"
   },
   "author": "",
   "license": "ISC",
